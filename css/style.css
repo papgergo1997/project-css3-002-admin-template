@@ -19,6 +19,7 @@ body {
     color: rgb(236, 236, 236);
     height: 4em;
     line-height: 4em;
+    display: block;
 }
 
 .header__title {
@@ -26,6 +27,13 @@ body {
     font-size: 1.25rem;
     font-family: "roboto-light";
     padding-left: 1em;
+}
+
+.header__title span {
+    position: absolute;
+    left: 19%;
+    top: 1em;
+    color: rgb(120, 120, 120);
 }
 
 .header__search--greyOne {
@@ -48,9 +56,10 @@ body {
     border: 2px solid transparent;    
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    padding: 0.75rem 0.375rem;
+    padding: 0.375rem 0.75rem;
     font-size: 1.2rem; 
-    transition: border 0.5s ease-in;        
+    transition: border 0.5s ease-in; 
+    outline: transparent;       
 }
 
 .search__input:focus {
@@ -61,17 +70,21 @@ body {
     border: 2px solid transparent;
     width: 2.5em;
     background-color: rgb(0, 123, 255);
-    padding: 0.75rem 0.75rem;
+    padding: 0.375rem 0.375rem;
     margin-left: -0.2em;
     color: white;
     font-size: 1.2em;
     border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-    
+    border-top-right-radius: 4px; 
+}
+
+
+
+main {
+    display: flex;
 }
 
 aside {
-    float: left;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -79,11 +92,10 @@ aside {
 }
 
 section {
-    display: inline-block;
     width: 77vw;
+    height: 100vh;
     padding-left: 2em;
-    padding-top: 2em;
-    
+    padding-top: 2em;    
 }
 
 /*Navigation*/
@@ -121,6 +133,21 @@ section {
 
 .white-li {
     color: white;
+    font-weight: 100;
+}
+
+li h4 {
+    width: 0.1em;
+    padding: 0;
+    margin-left: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+@media screen and (max-width: 700px) {
+    li h4{color: transparent;  
+    }
 }
 
 /*section*/
@@ -148,13 +175,16 @@ section {
 }
 
 .main__card {
-   width: 25%;
+    width: 25%;
    margin-top: 2em;
     color: white;
     font-family: inherit;
     border-radius: .25rem;
     box-shadow: 0 0 2px rgb(100, 100, 100);
 }
+
+
+
 
 
 .card__top {
@@ -238,3 +268,13 @@ border-top: solid 2px rgb(202, 53, 69);
     background-color: .3s
 }
 
+@media screen and (max-width: 700px) {
+    .main__cards{
+        display: inline-block;
+    }
+    .main__card {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;        
+    }
+}
