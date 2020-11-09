@@ -26,7 +26,7 @@ body {
     display: inline;
     font-size: 1.25rem;
     font-family: "roboto-light";
-    padding-left: 1em;
+    padding-left: 1rem;
 }
 
 .header__title span {
@@ -58,7 +58,7 @@ body {
     border-bottom-left-radius: 4px;
     padding: 0.375rem 0.75rem;
     font-size: 1.2rem; 
-    transition: border 0.5s ease-in; 
+    transition: border-color/*bárhogy meg lehet adni*/ 0.15s ease-in; 
     outline: transparent;       
 }
 
@@ -72,18 +72,19 @@ body {
     background-color: rgb(0, 123, 255);
     padding: 0.375rem 0.375rem;
     margin-left: -0.2em;
-    color: white;
+    color: rgb(236, 236, 236);
     font-size: 1.2em;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px; 
     outline: transparent;
+    cursor: pointer;
 }
 
 .search__btn:hover {
     background-color: rgb(0, 100, 255);
 }
 
-
+/*Main*/
 
 main {
     display: flex;
@@ -135,8 +136,14 @@ section {
     padding-bottom: 1em;
 }
 
-.white-li {
-    color: white;
+.nav__ul li a {
+    text-decoration: none;
+    color: rgb(120, 120, 120);
+    margin-left: 0.5em;
+    }
+
+.white-li  {
+    color:rgb(236, 236, 236);
     font-weight: 100;
 }
 
@@ -162,7 +169,6 @@ li h4 {
     margin: 0;
 }
 
-
 .main__breadcrumb {
     background-color: rgb(233, 236, 239);
     border-radius: .25rem;
@@ -181,15 +187,11 @@ li h4 {
 .main__card {
     width: 25%;
    margin-top: 2em;
-    color: white;
+    color: rgb(236, 236, 236);
     font-family: inherit;
     border-radius: .25rem;
     box-shadow: 0 0 2px rgb(100, 100, 100);
 }
-
-
-
-
 
 .card__top {
     background-color: transparent;
@@ -199,11 +201,12 @@ height: 5em;
 line-height: 5em;
 padding-left: 1.5em;
 font-family: "roboto";
-transition: background .3s ease-out;
+transition: background-color .3s ease-out;
 }
 
 .card__top:hover{
     background-color:rgb(158, 158, 157);
+    cursor: pointer;
 }
 
 .card__bottom {
@@ -214,11 +217,12 @@ line-height: 3em;
 padding-left: 1.5em;
 font-family: "roboto-light";
 font-size: 14px;
-transition: background .3s ease-out;
+transition: background-color .3s ease-out;
 } 
 
 .card__bottom:hover {
     background-color: rgb(187, 187, 187);
+    cursor: pointer;
 }
 
 .card__bottom span {
